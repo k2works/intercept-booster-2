@@ -4,7 +4,7 @@
   "description": "Stylish Legacy Application Slayer",
   "main": "main.js",
   "bin": {
-    "intercept-booster": "./bin/intercept-booster"
+    "intercept-booster": "./bin/intercept-booster-2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
