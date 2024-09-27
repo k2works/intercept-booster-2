@@ -1,0 +1,27 @@
+#!/usr/bin/env node
+
+const { exec } = require('child_process');
+const path = require('path');
+
+const setupProject = () => {
+  // パッケージのルートディレクトリのパスを取得する
+  const packageDir = path.dirname(require.resolve('@k2works/intercept-booster-2'));
+
+  // gulpのdefaultタスクを実行するコマンドを定義する
+  const gulpCommand = `npx gulp --gulpfile ${packageDir}/lib/gulpfile.js`;
+
+  // child_processモジュールのexec関数を使用して、gulpコマンドを実行する
+  const child = exec(gulpCommand);
+
+  // gulpコマンドの出力をコンソールに表示する
+  child.stdout.on('data', (data) => {
+    console.log(data);
+  });
+
+  // gulpコマンドのエラーをコンソールに表示する
+  child.stderr.on('data', (data) => {
+    console.error(data);
+  });
+}
+
+setupProject();

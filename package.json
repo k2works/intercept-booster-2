@@ -1,0 +1,31 @@
+{
+  "name": "@k2works/intercept-booster-2",
+  "version": "0.0.0",
+  "description": "Stylish Legacy Application Slayer",
+  "main": "main.js",
+  "bin": {
+    "intercept-booster": "./bin/intercept-booster"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "patch": "npm version patch",
+    "minor": "npm version minor",
+    "major": "npm version major",
+    "release": "npm publish --access public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k2works/intercept-booster-2.git"
+  },
+  "author": "k2works",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/k2works/intercept-booster-2/issues"
+  },
+  "homepage": "https://github.com/k2works/intercept-booster-2#readme",
+  "dependencies": {
+    "fs-extra": "^11.2.0",
+    "gulp": "^5.0.0",
+    "path": "^0.12.7"
+  }
+}
