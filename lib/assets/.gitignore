@@ -105,3 +105,13 @@ dist
 
 public
 lib
+
+/public
+docker/postgres/data
+docker/mysql/data
+docker/mssql/data
+docker/mssql/log
+docker/schemaspy/data
+docker/schemaspy/output
+
+.idea
