@@ -13,7 +13,7 @@ npm install @k2works/intercept-booster-2
 ## Usage
 
 ```js
-npx intercept-booster-2
+npx boot
 ```
 
 ## Development

@@ -4,7 +4,7 @@
   "description": "Stylish Legacy Application Slayer",
   "main": "main.js",
   "bin": {
-    "intercept-booster": "./bin/intercept-booster-2"
+    "boot": "./bin/intercept-booster-2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/k2works/intercept-booster-2#readme",
   "dependencies": {
+    "@k2works/intercept-booster-2": "^0.2.0",
     "fs-extra": "^11.2.0",
     "gulp": "^5.0.0",
     "path": "^0.12.7"
