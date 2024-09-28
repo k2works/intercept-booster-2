@@ -14,4 +14,4 @@
 
 == 参照
 
-* link:/docs/sample.html[サンプル^
+* link:/docs/sample.html[サンプル^]
