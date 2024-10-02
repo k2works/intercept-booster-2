@@ -24,7 +24,6 @@
   },
   "homepage": "https://github.com/k2works/intercept-booster-2#readme",
   "dependencies": {
-    "@k2works/intercept-booster-2": "^0.2.0",
     "fs-extra": "^11.2.0",
     "gulp": "^5.0.0",
     "path": "^0.12.7"
