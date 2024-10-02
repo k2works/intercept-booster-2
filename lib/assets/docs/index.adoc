@@ -10,6 +10,8 @@
 
 == 構成
 
+=== link:/docs/build.html[構築^]
+
 === link:./sample.html[サンプル^][[anchor-1]]
 
 == 参照
