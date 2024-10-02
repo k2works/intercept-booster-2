@@ -17,9 +17,6 @@
 ### Quick Start
 
 ```bash
-npm init -y
-npm i @k2works/intercept-booster-2
-npx boot
 npm install
 npm start
 ```
@@ -34,7 +31,7 @@ npm start
 ## 参照
 
 - [Conventional Commits 1.0.0](https://www.conventionalcommits.org/ja/v1.0.0/)
-- [@k2works/intercept-booster](https://www.npmjs.com/package/@k2works/intercept-booster)
+- [@k2works/intercept-booster-2](https://www.npmjs.com/package/@k2works/intercept-booster-2)
 - [@k2works/full-stack-lab](https://www.npmjs.com/package/@k2works/full-stack-lab)
 - [Gulp](https://gulpjs.com/docs/en/getting-started/quick-start)
 - [Asciidoctor](https://asciidoctor.org/)

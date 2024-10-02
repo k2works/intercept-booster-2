@@ -10,6 +10,10 @@
 
 == 構成
 
+=== link:/docs/req.html[要件^]
+
+=== link:/docs/dev.html[開発^]
+
 === link:/docs/build.html[構築^]
 
 === link:/docs/run.html[運用^]
