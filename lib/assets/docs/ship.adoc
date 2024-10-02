@@ -114,6 +114,20 @@ jobs:
 . レポジトリにコミット・プッシュしてワークフローを有効にします。
 +
 . READMEにバッジを追加します。
++
+. `package.json` にテストタスクを追加します
++
+[source, json]
+----
+  "scripts": {
+    "start": "npx gulp",
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "build": "npx gulp build",
+    "slides": "npx gulp slides",
+    "docs": "npx gulp docs"
+  },
+----
+
 
 ## Herokuとは
 Herokuは、クラウドプラットフォームであり、開発者がアプリケーションを構築、実行、スケールするためのツールを提供します。
