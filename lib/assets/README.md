@@ -17,8 +17,9 @@
 ### Quick Start
 
 ```bash
-npm i @k2works/intercept-booster
-npx intercept-booster
+npm init -y
+npm i @k2works/intercept-booster-2
+npx boot
 npm install
 npm start
 ```
