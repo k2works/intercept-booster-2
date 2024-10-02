@@ -692,8 +692,7 @@ exports.slides = series(core.marp.build);
     "start": "npx gulp",
     "build": "npx gulp build",
     "slides": "npx gulp slides",
-    "docs": "npx gulp docs",
-    "watch": "npx gulp watch",
+    "docs": "npx gulp docs"
   },
 }
 ----

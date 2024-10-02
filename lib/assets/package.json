@@ -4,11 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "gulp",
-    "tasks": "gulp --tasks",
-    "build": "gulp build",
-    "docs": "gulp docs",
-    "slide": "gulp slides"
+    "start": "npx gulp",
+    "build": "npx gulp build",
+    "slides": "npx gulp slides",
+    "docs": "npx gulp docs"
   },
   "author": "",
   "license": "ISC",
