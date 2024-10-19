@@ -107,11 +107,11 @@ public
 lib
 
 /public
-docker/postgres/data
-docker/mysql/data
-docker/mssql/data
-docker/mssql/log
-docker/schemaspy/data
-docker/schemaspy/output
+ops/docker/postgres/data
+ops/docker/mysql/data
+ops/docker/mssql/data
+ops/docker/mssql/log
+ops/docker/schemaspy/data
+ops/docker/schemaspy/output
 
 .idea
