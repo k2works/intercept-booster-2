@@ -188,7 +188,7 @@ actor システム
 ```plantuml
 @startuml
 
-title 受注管理シーケンス図
+title ユーザー管理シーケンス図
 
 actor 管理者
 Participant システム
