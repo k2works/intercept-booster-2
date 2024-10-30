@@ -23,3 +23,5 @@
 == 参照
 
 * link:/docs/sample.html[サンプル^]
+
+* link:/docs/biz.html[業務分析^]
