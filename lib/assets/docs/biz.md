@@ -2,88 +2,81 @@
 
 ## ビジネスモデル
 
-```plantuml
-@startmindmap
-* ビジネスモデル
--- 外部環境
---- 競争
---- 政治・社会・技術
---- マクロ経済
---- 市場
-** 内部環境
-*** 顧客
-**** 顧客セグメント
-**** 顧客関係
-*** 価値
-**** 価値提案
-**** チャネル
-*** インフラ
-**** 主要活動
-**** 主要パートナー
-*** 資金
-**** 収益源
-***** 売上
-**** コスト構造
-***** 変動費
-***** 固定費
-@endmindma
+```mermaid
+mindmap
+  root((ビジネスモデル))
+    外部環境
+      競争
+      政治・社会・技術
+      マクロ経済
+      市場
+    内部環境
+      顧客
+        顧客セグメント
+        顧客関係
+      価値
+        価値提案
+        チャネル
+      インフラ
+        主要活動
+        主要パートナー
+      資金
+        収益源
+          売上
+        コスト構造
+          変動費
+          固定費
 ```
 
 ## インパクトマップ
 
-```plantuml
-@startmindmap
-* Goals
-** Actors
-*** Impacts
-**** Deliverables
-**** Deliverables
-*** Impacts
-**** Deliverables
-*** Impacts
-**** Deliverables
-**** Deliverables
-** Actors
-*** Impacts
-**** Deliverables
-*** Impacts
-**** Deliverables
-** Actors
-*** Impacts
-**** Deliverables
-*** Impacts
-**** Deliverables
-
-@endmindma
+```mermaid
+mindmap
+  root((Goals))
+    Actors
+      Impacts
+        Deliverables
+        Deliverables
+      Impacts
+        Deliverables
+      Impacts
+        Deliverables
+        Deliverables
+    Actors
+      Impacts
+        Deliverables
+      Impacts
+        Deliverables
+    Actors
+      Impacts
+        Deliverables
+      Impacts
+        Deliverables
 ```
 
 ## ドメイン
 
-```plantuml
-@startmindmap
-
-title ドメイン
-
-* 組織
--- ドメイン
---- 企業ドメイン
----- 理念
----- ビジョン
----- ミッション
---- 事業ドメイン
----- 誰に
----- 何を
----- どのように
---- サブドメイン
----- コアサブドメイン
----- 汎用サブドメイン
----- サポートサブドメイン
-** 事業
-*** 部門
-*** 部門
-*** 部門
-
-@endmindmap
+```mermaid
+mindmap
+  root((ドメイン))
+    組織
+      ドメイン
+        企業ドメイン
+          理念
+          ビジョン
+          ミッション
+        事業ドメイン
+          誰に
+          何を
+          どのように
+        サブドメイン
+          コアサブドメイン
+          汎用サブドメイン
+          サポートサブドメイン
+    事業
+      部門
+      部門
+      部門
 ```
 
 ```mermaid
@@ -121,27 +114,17 @@ quadrantChart
 
 ### サブドメイン
 
-```plantuml
-@startuml
-
-title ビジネスコンテキスト図
-
-left to right direction
-
-
-rectangle 事業 {
-node 自社 {
-  rectangle 部門 {
-    usecase ユーザー管理
-    }
-    actor 管理者
-    actor ユーザー
-  }
-}
-
-管理者 -- (ユーザー管理)
-
-@enduml
+```mermaid
+flowchart LR
+  subgraph 事業
+    subgraph 自社
+      subgraph 部門
+        ユーザー管理
+      end
+      管理者 --> ユーザー管理
+      ユーザー --> ユーザー管理
+    end
+  end
 ```
 
 ## ビジネスユースケース
@@ -150,133 +133,73 @@ node 自社 {
 
 #### ユースケース図
 
-```plantuml
-@startuml
-
-title ビジネスユースケース
-
-left to right direction
-skinparam packageStyle rectangle
-
-rectangle ユーザー管理 {
-  (ユーザー一覧を取得する)
-  (ユーザーを新規登録する)
-  (ユーザーを取得する)
-  (登録済みユーザーを更新登録する)
-  (登録済みユーザーを削除する)
-}
-
-actor 管理者
-actor システム
-管理者 -- (ユーザー一覧を取得する)
-管理者 -- (ユーザーを新規登録する)
-管理者 -- (ユーザーを取得する)
-管理者 -- (登録済みユーザーを更新登録する)
-管理者 -- (登録済みユーザーを削除する)
-(ユーザー一覧を取得する) -- システム
-(ユーザーを新規登録する) -- システム
-(ユーザーを取得する) -- システム
-(登録済みユーザーを更新登録する) -- システム
-(登録済みユーザーを削除する) -- システム
-
-
-@enduml
+```mermaid
+graph TB
+    subgraph "ユーザー管理"
+        管理者((管理者))
+        subgraph "ユーザー操作"
+            ユーザー一覧を取得する[ユーザー一覧を取得する]
+            ユーザーを新規登録する[ユーザーを新規登録する]
+            ユーザーを取得する[ユーザーを取得する]
+            登録済みユーザーを更新登録する[登録済みユーザーを更新登録する]
+            登録済みユーザーを削除する[登録済みユーザーを削除する]
+        end
+    end
+    管理者 --> ユーザー一覧を取得する
+    管理者 --> ユーザーを新規登録する
+    管理者 --> ユーザーを取得する
+    管理者 --> 登録済みユーザーを更新登録する
+    管理者 --> 登録済みユーザーを削除する
 ```
 
 #### シーケンス図
 
-```plantuml
-@startuml
-
-title ユーザー管理シーケンス図
-
-actor 管理者
-Participant システム
-
-group ユーザー管理
-管理者 -> システム : ユーザー一覧を取得する
-管理者 -> システム : ユーザーを新規登録する
-システム -> 管理者 : ユーザーを登録する
-管理者 -> システム : ユーザーを取得する
-管理者 -> システム : 登録済みユーザーを更新登録する
-システム -> 管理者 : ユーザーを更新登録する
-管理者 -> システム : 登録済みユーザーを削除する
-end
-
-
-@enduml
+```mermaid
+sequenceDiagram
+  participant 管理者
+  participant システム
+  管理者 ->> システム: ユーザー一覧を取得する
+  管理者 ->> システム: ユーザーを新規登録する
+  システム ->> 管理者: ユーザーを登録する
+  管理者 ->> システム: ユーザーを取得する
+  管理者 ->> システム: 登録済みユーザーを更新登録する
+  システム ->> 管理者: ユーザーを更新登録する
+  管理者 ->> システム: 登録済みユーザーを削除する
 ```
 
 #### 業務フロー図
 
 ##### ユーザー一覧取得
 
-```plantuml
-@startuml
-
-title ユーザー管理業務フロー図 ユーザー一覧取得
-
-|システム|
-start
-:ユーザー一覧を取得する;
-stop
-
-@enduml
+```mermaid
+flowchart TD
+  A[スタート] -->|ユーザー一覧を取得する| B[ストップ]
 ```
 
 ##### ユーザー新規登録
 
-```plantuml
-@startuml
-
-title ユーザー管理業務フロー図 ユーザー新規登録
-
-|システム|
-start
-:ユーザーを新規登録する;
-stop
-
-@enduml
+```mermaid
+flowchart TD
+  A[スタート] -->|ユーザーを新規登録する| B[ストップ]
 ```
 
 ##### ユーザー取得
 
-```plantuml
-@startuml
-|システム|
-start
-:ユーザーを取得する;
-stop
-
-@enduml
+```mermaid
+flowchart TD
+  A[スタート] -->|ユーザーを取得する| B[ストップ]
 ```
 
 ##### ユーザー更新登録
 
-```plantuml
-@startuml
-
-title ユーザー管理業務フロー図 ユーザー更新登録
-
-|システム|
-start
-:登録済みユーザーを更新登録する;
-stop
-
-@enduml
+```mermaid
+flowchart TD
+  A[スタート] -->|登録済みユーザーを更新登録する| B[ストップ]
 ```
 
 ##### ユーザー削除
 
-```plantuml
-@startuml
-
-title ユーザー管理業務フロー図 ユーザー削除
-
-|システム|
-start
-:登録済みユーザーを削除する;
-stop
-
-@enduml
+```mermaid
+flowchart TD
+  A[スタート] -->|登録済みユーザーを削除する| B[ストップ]
 ```
