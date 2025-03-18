@@ -7,6 +7,7 @@
     "start": "npx gulp",
     "test": "npm-run-all build slides",
     "build": "npx gulp build",
+    "dev": "npx gulp dev",
     "slides": "npx gulp slides",
     "docs": "npx gulp docs"
   },
@@ -33,6 +34,9 @@
   },
   "dependencies": {
     "@k2works/adr": "^1.8.0",
-    "@k2works/full-stack-lab": "^1.8.0"
+    "@k2works/full-stack-lab": "^1.8.0",
+    "fs-extra": "^11.2.0",
+    "gulp-exec": "^5.0.0",
+    "gulp-rename": "^2.0.0"
   }
 }
