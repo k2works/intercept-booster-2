@@ -109,7 +109,6 @@ services:
 
   plantuml:
     image: plantuml/plantuml-server:jetty
-    hostname: plantuml
     environment:
       BASE_URL: plantuml
     ports:
